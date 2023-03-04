@@ -1,0 +1,8 @@
+crontab
+
+By using this we can put a alaram to let us know at a perticular instance how many instances are available 
+
+0 2 * * * /path/to/your/script.sh
+
+
+script.sh is the file where the details will be stored. 
