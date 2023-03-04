@@ -1,0 +1,30 @@
+#AWS resources Usaage
+
+#!/bin/bash
+
+#######
+
+# author : khaja
+#date 3-3-2023
+##
+#
+#verion v1
+#
+#
+##THis script will report the aws resource usage
+###############
+set -x
+
+#AWS S3
+echo "aws s3 list"
+aws s3 ls >> khaja
+
+
+#AWS EC2
+aws ec2 describe-instances >>khaja
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'  >>khaja
+
+
+#AWS lambda
+aws lambda list-functions >>khaja
+echo "lambda"
